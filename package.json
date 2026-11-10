@@ -1,0 +1,20 @@
+{
+  "name": "vocab-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "electron": "^39.0.0",
+    "lowdb": "^7.0.1"
+  },
+  "allowScripts": {
+    "electron": true
+  }
+}

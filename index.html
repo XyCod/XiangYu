@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四六级词汇学习</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 顶部信息栏 -->
+        <header>
+            <div class="stats">
+                <span>今日目标: <strong id="today-progress">0 / 20</strong></span>
+                <span>累计掌握: <strong id="total-learned">0</strong></span>
+            </div>
+            <div class="controls">
+                <select id="level-select">
+                    <option value="CET4">四级</option>
+                    <option value="CET6">六级</option>
+                </select>
+                <button id="btn-settings">⚙️ 设置</button>
+            </div>
+        </header>
+
+        <!-- 学习卡片区 -->
+        <main class="card-container">
+            <div class="card" id="word-card">
+                <div class="word-header">
+                    <h1 id="word-text">加载中...</h1>
+                    <button id="btn-speak" title="发音">🔊</button>
+                </div>
+                
+                <div class="word-content hidden" id="word-content">
+                    <div id="translations-list"></div>
+                    <div id="phrases-list" class="phrases"></div>
+                </div>
+                
+                <div class="prompt" id="prompt">点击卡片或按空格键显示释义</div>
+            </div>
+        </main>
+
+        <!-- 底部操作区 -->
+        <footer id="action-buttons" class="hidden">
+            <button class="btn btn-wrong" data-q="1">忘记了</button>
+            <button class="btn btn-hard" data-q="3">模糊</button>
+            <button class="btn btn-good" data-q="5">记住了</button>
+        </footer>
+    </div>
+
+    <!-- 设置弹窗 -->
+    <div class="modal hidden" id="settings-modal">
+        <div class="modal-content">
+            <h2>设置</h2>
+            <label>每日新词量: <input type="number" id="input-daily" min="5" max="100" value="20"></label>
+            <button id="btn-save-settings">保存</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
